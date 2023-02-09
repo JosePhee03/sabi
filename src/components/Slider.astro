@@ -1,0 +1,50 @@
+---
+export interface Props {
+	array: string[]
+}
+
+const { array } = Astro.props
+
+const STYLES_IMAGES_DEFAULT = 'slider bg-cover bg-center bg-no-repeat w-full h-screen'
+const totalWidth = 100 * array.length
+---
+
+<div class={'flex w-[' + totalWidth + '%]'}>
+	{array.map((element) => <div class={element + STYLES_IMAGES_DEFAULT} />)}
+</div>
+
+<style>
+	.slider {
+		animation: slider 30s infinite ease-in-out;
+	}
+
+	@keyframes slider {
+		0% {
+			transform: translateX(0);
+		}
+		10% {
+			transform: translateX(0);
+		}
+		20% {
+			transform: translateX(-100%);
+		}
+		30% {
+			transform: translateX(-100%);
+		}
+		40% {
+			transform: translateX(-200%);
+		}
+		50% {
+			transform: translateX(-200%);
+		}
+		60% {
+			transform: translateX(-100%);
+		}
+		70% {
+			transform: translateX(-100%);
+		}
+		90% {
+			transform: translateX(0);
+		}
+	}
+</style>

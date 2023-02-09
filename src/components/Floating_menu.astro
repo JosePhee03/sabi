@@ -1,0 +1,30 @@
+<!-- Floating menu  -->
+<div class="flex justify-center items-center flex-col gap-2 w-52 bg-gray-100 floating-element rounded-b rounded-tl drop-shadow">
+    <div class="relative flex justify-center items-center flex-col gap-1 pt-2 w-full hover:bg-light-gray hover:cursor-pointer">
+        <img src="/img/user_icon.svg" alt="icon user sabi" class="w-24">
+        <h3 class="button-config font-nunito font-bold text-2xl">Usuario</h3>
+        <img src="/img/Settings.svg" alt="icon settings" class="absolute top-2 left-2">
+    </div>
+    <button class="px-4 py-1 rounded-full hover:bg-red-400 border-[1px] border-red-400 hover:cursor-pointer">
+        <h5 class="font-nunito text-xs text-center">Cerrar Sesión</h5>
+    </button>
+    
+    <button class="cursor-ponter hover:bg-light-gray w-full py-2 border-light-gray border-t">
+        <h4 class="font-nunito text-sm text-center">Tema: claro</h4>
+    </button>
+</div>
+<!-- Floating menu/ -->
+
+<style>
+    .floating-element::after{
+        content: "";
+        position: absolute;
+        top: -1rem;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: 0 1rem 1rem;
+        border-style: solid;
+        border-color: transparent transparent rgb(243 244 246 / var(--tw-bg-opacity));
+    }    
+</style>
