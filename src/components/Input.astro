@@ -1,13 +1,17 @@
 ---
 export interface Props {
-	type: any;
-    text: string;
+	type: any
+	text: string
 }
 
-const { type, text } = Astro.props;
+const { type, text } = Astro.props
 ---
 
-<div class="w-full">
-    <h4 class="text-lg w-full dark:text-white">{text}</h4>
-    <input type={type} placeholder={`Escriba su ${text.toLowerCase()}...`} class="w-full bg-transparent font-nunito p-2 text-sm border-2 border-light-gray rounded outline-none focus:border-secondary dark:focus:border-secondary dark:border-dark-gray dark:text-white">
+<div class='w-full'>
+	<h4 class='text-lg text-color font-nunito'>{text}</h4>
+	<input
+		type={type}
+		placeholder={`Escriba su ${text.toLowerCase()}...`}
+		class='w-full bg-transparent shadow-sm font-nunito p-2 text-sm border-2 border-color text-color rounded-md outline-none focus:border-secondary dark:focus:border-secondary'
+	/>
 </div>

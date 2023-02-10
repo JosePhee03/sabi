@@ -1,78 +1,12 @@
 ---
+import CardSession from '../components/CardSession.astro'
+import Header from '../components/Header.astro'
 import Layout from '../layouts/Layout.astro'
-import Input from '../components/Input.astro'
-import ButtonAlternative from '../components/Button_alternative.astro'
 ---
 
-<!-- Body -->
 <Layout title='SABI | Iniciar Sesión'>
-	<!-- Main -->
-	<main class='w-full h-screen sm:h-auto flex items-center justify-center bg-white dark:bg-dark'>
-		<!-- Header -->
-		<header
-			class='hidden sm:flex justify-between bg-white dark:bg-dark dark:border-dark-gray border-b-[1px] border-light-gray absolute left 0 top-0 w-full py-3 px-5'
-		>
-			<a href='#'
-				><img
-					src='/img/Arrow.svg'
-					alt='icon-arrow'
-					class='w-10 dark:invert hover:cursor-pointer'
-				/></a
-			>
-			<img src='/img/user_icon.svg' alt='user_icon' class='w-10 h-10 drop-shadow-secondary' />
-		</header>
-		<!-- Header/ -->
-
-		<!-- Card form -->
-		<div
-			class='w-full h-full bg-white flex items-center flex-col dark:bg-dark sm:w-[400px] sm:h-[540px] sm:mt-20 drop-shadow-normal sm:rounded sm:border-[1px] sm:dark:border-dark-gray sm:mb-4'
-		>
-			<!-- Header 2 -->
-			<div
-				class='w-full flex justify-between items-center py-3 px-5 border-b-[1px] border-light-gray dark:border-dark-gray'
-			>
-				<div class='w-10 h-10'>
-					<a href='#' class='sm:hidden'
-						><img src='/img/Arrow.svg' alt='icon-arrow' class='w-full dark:invert' /></a>
-				</div>
-				<h3
-					class='text-2xl font-blinker bg-sabi bg-clip-text text-transparent font-bold text-shadow'
-				>
-					Cuenta SABI
-				</h3>
-				<img class='drop-shadow-secondary' src='/img/icon-sabi-gradient.svg' alt='icon-sabi' />
-			</div>
-			<!-- Header 2/ -->
-
-			<!-- Cont Form -->
-			<div class='m-auto w-3/4 flex flex-col items-center justify-center'>
-				<h3 class='font-nunito text-2xl dark:text-white'>Iniciar Sesión</h3>
-				<form
-					class='py-5 my-5 w-full gap-6 border-t-[1px] border-b-[1px] border-light-gray flex flex-col justify-center items-center dark:border-dark-gray'
-					action=''
-					method='post'
-				>
-					<Input type='email' text='Email' />
-					<Input type='password' text='Contraseña' />
-					<ButtonAlternative text='Iniciar Sesión' />
-				</form>
-				<h6 class='dark:text-white text-sm'>
-					¿Necesitas una cuenta? <a
-						href='#'
-						class='hover:cursor-pointer text-secondary decoration-secondary hover:underline underline-offset-1'
-						>Registrate aquí</a>
-				</h6>
-			</div>
-			<!-- Cont Form/ -->
-		</div>
-		<!-- Card form/ -->
+	<Header />
+	<main class='bg-color'>
+		<CardSession />
 	</main>
-	<!-- Main/ -->
 </Layout>
-<!-- Body/ -->
-
-<style>
-	.text-shadow {
-		text-shadow: 0px 0px 10px #0656d050;
-	}
-</style>

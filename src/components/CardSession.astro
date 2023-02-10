@@ -1,0 +1,26 @@
+---
+import ButtonGithub from './ButtonGithub.astro'
+import ButtonGoogle from './ButtonGoogle.astro'
+import ButtonAlternative from './Button_alternative.astro'
+import Input from './Input.astro'
+---
+
+<div class='card-form'>
+	<h2 class='text-2xl font-blinker text-color text-center'>Iniciar Sesión</h2>
+
+	<section class='my-3'>
+		<form class='border-y border-color py-6 flex flex-col items-center gap-6'>
+			<Input type='email' text='Email' />
+			<Input type='password' text='Contraceña' />
+			<ButtonAlternative text='Iniciar Sesión' />
+		</form>
+		<div class='flex flex-col items-center gap-4 border-b border-color p-5'>
+			<ButtonGithub />
+			<ButtonGoogle />
+		</div>
+	</section>
+
+	<h6 class='text-sm text-color text-center'>
+		¿Ya tienes una cuenta? <a href='#' class='text-secondary'>Registrarse</a>
+	</h6>
+</div>
