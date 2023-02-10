@@ -1,0 +1,21 @@
+.card {
+	@apply bg-white rounded-md border border-light-gray dark:bg-dark dark:border-dark-gray;
+}
+.card-form {
+	@apply w-full flex flex-col p-10 my-10 md:my-20 mini:w-96 mx-auto bg-white rounded-md sm:border border-light-gray dark:bg-dark dark:border-dark-gray sm:shadow-rounded;
+}
+.img-size {
+	@apply h-10 w-10;
+}
+
+.text-color {
+	@apply text-black dark:text-white;
+}
+
+.border-color {
+	@apply border-light-gray dark:border-dark-gray;
+}
+
+.bg-color {
+	@apply bg-white dark:bg-dark;
+}
