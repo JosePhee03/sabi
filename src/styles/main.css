@@ -19,3 +19,34 @@
 .bg-color {
 	@apply bg-white dark:bg-dark;
 }
+
+.input-style {
+	@apply w-full bg-transparent text-lg font-nunito p-2 border-2 rounded outline-none;
+}
+
+.fill-color {
+	@apply fill-light-gray dark:fill-dark-gray;
+}
+
+.toggle::after {
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	background-color: white;
+	border-radius: 9999px;
+	position: relative;
+	left: 0.1rem;
+	box-shadow: 0px 2px 4px #00000025;
+	transition: all 0.3s;
+}
+
+.gray-color {
+	@apply bg-light-gray dark:bg-dark-gray;
+}
+
+.text-sabi {
+	@apply bg-sabi text-transparent bg-clip-text;
+}
+.divide-color {
+	@apply divide-light-gray dark:divide-dark-gray;
+}
