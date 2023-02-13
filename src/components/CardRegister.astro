@@ -1,0 +1,24 @@
+---
+import Input from './Input.astro'
+import ButtonAlternative from './Button_alternative.astro'
+---
+
+<div class='card-form'>
+	<h2 class='text-2xl font-blinker text-color text-center'>Registrarse</h2>
+
+	<section class='my-3'>
+		<form class='border-y border-color py-6 flex flex-col items-center gap-6'>
+			<Input type='text' text='Nombre' />
+			<Input type='email' text='Email' />
+			<Input type='password' text='Constraceña' />
+			<Input type='password' text='Confirmar contraceña' />
+			<ButtonAlternative text='Registrarse' />
+		</form>
+	</section>
+
+	<h6 class='text-sm text-color text-center'>
+		¿Ya tienes una cuenta? <a href='/session' class='text-secondary hover:underline'
+			>Iniciar Sesión</a
+		>
+	</h6>
+</div>
