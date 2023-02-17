@@ -1,0 +1,166 @@
+<model-viewer
+	src='src/modelViewer/my_sabi.glb'
+	ar
+	ar-modes='webxr scene-viewer quick-look'
+	camera-controls
+	poster='src/modelViewer/poster.webp'
+	shadow-intensity='1'
+	shadow-softness='0.8'
+	camera-orbit='117.2deg 76.73deg 19.85m'
+	field-of-view='30deg'
+	environment-image='legacy'
+	exposure='0.15'
+>
+	<button
+		class='Hotspot'
+		slot='hotspot-5'
+		data-surface='0 2 17 14 20 0.572 0.426 0.002'
+		data-visibility-attribute='visible'
+	>
+		<div class='HotspotAnnotation'>Luces led</div>
+	</button><button
+		class='Hotspot'
+		slot='hotspot-7'
+		data-surface='0 0 796 927 793 0.292 0.528 0.181'
+		data-visibility-attribute='visible'
+	>
+		<div class='HotspotAnnotation'>Soporte para asiento</div>
+	</button>
+	<div class='progress-bar hide' slot='progress-bar'>
+		<div class='update-bar'></div>
+	</div>
+	<button slot='ar-button' id='ar-button'> View in your space</button>
+	<div id='ar-prompt'>
+		<img src='https://modelviewer.dev/shared-assets/icons/hand.png' />
+	</div>
+</model-viewer>
+
+<script
+	type='module'
+	src='https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.0/model-viewer.min.js'
+></script>
+
+<script>
+	// Handles loading the events for <model-viewer>'s slotted progress bar
+	const onProgress = (event) => {
+		const progressBar = event.target.querySelector('.progress-bar')
+		const updatingBar = event.target.querySelector('.update-bar')
+		updatingBar.style.width = `${event.detail.totalProgress * 100}%`
+		if (event.detail.totalProgress === 1) {
+			progressBar.classList.add('hide')
+			event.target.removeEventListener('progress', onProgress)
+		} else {
+			progressBar.classList.remove('hide')
+		}
+	}
+	document.querySelector('model-viewer').addEventListener('progress', onProgress)
+</script>
+
+<style>
+	model-viewer {
+		background: #f9f9f9;
+		height: 400px;
+		width: 800px;
+	}
+	button {
+		background-color: white;
+		padding: 10px 30px;
+		border-radius: 999px;
+		box-shadow: 0 2px 8px #00000050;
+	}
+	.progress-bar {
+		display: block;
+		width: 33%;
+		height: 10%;
+		max-height: 2%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		border-radius: 25px;
+		box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+		border: 1px solid rgba(255, 255, 255, 0.9);
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.progress-bar.hide {
+		visibility: hidden;
+		transition: visibility 0.3s;
+	}
+
+	.update-bar {
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 0%;
+		height: 100%;
+		border-radius: 25px;
+		float: left;
+		transition: width 0.3s;
+	}
+
+	#ar-button {
+		background-image: url('scr/ModelViewer/ar-icon.png');
+		background-repeat: no-repeat;
+		background-size: 20px 20px;
+		background-position: 12px 50%;
+		background-color: #fff;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+		bottom: 16px;
+		padding: 0px 16px 0px 40px;
+		font-family: Roboto Regular, Helvetica Neue, sans-serif;
+		font-size: 14px;
+		color: #4285f4;
+		height: 36px;
+		line-height: 36px;
+		border-radius: 18px;
+		border: 1px solid #dadce0;
+	}
+
+	#ar-button:active {
+		background-color: #e8eaed;
+	}
+
+	#ar-button:focus {
+		outline: none;
+	}
+
+	#ar-button:focus-visible {
+		outline: 1px solid #4285f4;
+	}
+
+	@keyframes circle {
+		from {
+			transform: translateX(-50%) rotate(0deg) translateX(50px) rotate(0deg);
+		}
+		to {
+			transform: translateX(-50%) rotate(360deg) translateX(50px) rotate(-360deg);
+		}
+	}
+
+	@keyframes elongate {
+		from {
+			transform: translateX(100px);
+		}
+		to {
+			transform: translateX(-100px);
+		}
+	}
+
+	model-viewer > #ar-prompt {
+		position: absolute;
+		left: 50%;
+		bottom: 60px;
+		animation: elongate 2s infinite ease-in-out alternate;
+		display: none;
+	}
+
+	model-viewer[ar-status='session-started'] > #ar-prompt {
+		display: block;
+	}
+
+	model-viewer > #ar-prompt > img {
+		animation: circle 4s linear infinite;
+	}
+</style>
