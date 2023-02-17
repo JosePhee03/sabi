@@ -1,0 +1,42 @@
+---
+import ApexCharts from 'apexcharts'
+---
+
+<div id='myChart2' class='w-full'></div>
+<script>
+	const options = {
+		chart: {
+			type: 'bar'
+		},
+		colors: ['#27FF71'],
+		fill: {
+			type: 'gradient',
+			gradient: {
+				shade: 'dark',
+				type: 'vertical',
+				gradientToColors: ['#06D0AC'],
+				stops: [0, 100]
+			}
+		},
+		series: [
+			{
+				data: [
+					{
+						x: 'category A',
+						y: 10
+					},
+					{
+						x: 'category B',
+						y: 18
+					},
+					{
+						x: 'category C',
+						y: 13
+					}
+				]
+			}
+		]
+	}
+	const chart = new ApexCharts(document.querySelector('#myChart2'), options)
+	chart.render()
+</script>

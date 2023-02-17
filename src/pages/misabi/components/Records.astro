@@ -1,0 +1,39 @@
+---
+const records = [
+	{
+		key: 'km',
+		value: '0',
+		color: 'red'
+	},
+	{
+		key: 'hs',
+		value: '0',
+		color: 'purple'
+	},
+	{
+		key: 'cal',
+		value: '0',
+		color: 'orange'
+	}
+]
+---
+
+<article class='flex gap-6 items-center border-b border-color'>
+	{
+		records.map((record) => (
+			<div class='flex flex-col items-center'>
+				<h6 class={'text-sm font-nunito font-bold text-gradient-' + record.color}>
+					{record.key} Max.
+				</h6>
+				<h4 class={'text-lg font-nunito font-bold text-gradient-' + record.color}>
+					{record.value}
+				</h4>
+			</div>
+		))
+	}
+	<div class='flex flex-col items-center relative top-2 ml-6'>
+		<h6 class='text-sm font-nunito font-bold text-gradient-green'>Record total</h6>
+		<img src='/img/record-tota-icon.svg' alt='' />
+		<h4 class='text-lg font-nunito font-bold text-gradient-green relative -top-7'>0</h4>
+	</div>
+</article>

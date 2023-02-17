@@ -1,0 +1,40 @@
+---
+import ApexCharts from 'apexcharts'
+---
+
+<div id='chart' class='w-full'></div>
+
+<script>
+	const options = {
+		chart: {
+			height: 280,
+			type: 'area'
+		},
+		dataLabels: {
+			enabled: false
+		},
+		series: [
+			{
+				name: 'Series 1',
+				data: [45, 52, 38, 45, 19, 23, 2]
+			}
+		],
+		colors: ['#574EB1'],
+		fill: {
+			type: 'gradient',
+			gradient: {
+				shadeIntensity: 1,
+				opacityFrom: 0.7,
+				opacityTo: 0.9,
+				stops: [0, 90, 100]
+			}
+		},
+		xaxis: {
+			categories: ['Día 01', 'Día 05', 'Día 10', 'Día 15', 'Día 20', 'Día 25', 'Día 30']
+		}
+	}
+
+	const chart = new ApexCharts(document.querySelector('#chart'), options)
+
+	chart.render()
+</script>

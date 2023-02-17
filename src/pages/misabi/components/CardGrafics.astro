@@ -1,0 +1,26 @@
+---
+import ApexChartArea from './ApexChartArea.astro'
+import ApexChartBar from './ApexChartBar.astro'
+import Records from './Records.astro'
+---
+
+<section
+	class='card flex py-4 px-8 flex-col items-center w-full bg-white sm:rounded-md sm:border border-light-gray dark:bg-dark dark:border-dark-gray'
+>
+	<h4 class='text-sabi text-2xl font-semibold font-blinker'>Estadisticas</h4>
+	<Records />
+	<article class='divide-y divide-color w-full'>
+		<div class='flex flex-col items-center pt-6'>
+			<h4 class='text-color font-nunito font-bold text-primary text-lg'>Mes de junio</h4>
+			<ApexChartArea />
+		</div>
+		<div class='flex flex-col items-center pt-6'>
+			<h4 class='text-color font-nunito font-bold text-[#06D0AC] text-lg'>Mes de julio</h4>
+			<ApexChartBar />
+		</div>
+	</article>
+	<button class='flex items-center gap-3 hover:bg-light-gray px-4 py-2 rounded-md'>
+		<h2 class='text-lg text-sabi font-nunito font-bold'>Ver más estadisticas</h2>
+		<img src='/img/triangle-icon.svg' alt='' />
+	</button>
+</section>
