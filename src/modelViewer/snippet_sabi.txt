@@ -1,0 +1,16 @@
+<model-viewer src="my_sabi.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1" shadow-softness="0.8" camera-orbit="117.2deg 76.73deg 19.85m" field-of-view="30deg" environment-image="legacy" exposure="1">
+    <button class="Hotspot" slot="hotspot-5" data-surface="0 2 17 14 20 0.572 0.426 0.002" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Luces led</div>
+    </button><button class="Hotspot" slot="hotspot-7" data-surface="0 0 796 927 793 0.292 0.528 0.181" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Soporte para asiento</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+</model-viewer>
