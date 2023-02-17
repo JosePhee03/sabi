@@ -9,7 +9,7 @@ module.exports = {
 				secondary: '#0656D0',
 				'light-gray': '#eeeeee',
 				'dark-gray': '#424864',
-				dark: '#292D3E',
+				dark: '#16171b', // '#292D3E'
 				'dark-100': '#272B3B',
 				'white-100': '#F9F9F9',
 				'semi-transparent': '#00000020',
@@ -21,9 +21,13 @@ module.exports = {
 			},
 			backgroundImage: {
 				sabi: 'linear-gradient(0deg, rgba(6,86,208,1) 0%, rgba(87,78,177,1) 100%)',
-				'bici-sabi': 'url("/img/bici-SABI.png")',
-				'luces-sabi': 'url("/img/luces-SABI.png")',
-				'control-sabi': 'url("/img/control-SABI.png")'
+				'gradient-green': 'linear-gradient(0deg, rgba(6,208,172,1) 0%, rgba(39,255,113,1) 100%)',
+				'gradient-red': 'linear-gradient(0deg, rgba(208,35,35,1) 0%, rgba(255,107,178,1) 100%)',
+				'gradient-purple': 'linear-gradient(0deg, rgba(121,35,208,1) 0%, rgba(208,107,225,1) 100%)',
+				'gradient-orange': 'linear-gradient(0deg, rgba(208,87,35,1) 0%, rgba(255,178,107,1) 100%)',
+				'bici-sabi': 'url("/img/bici-sabi-HD.png")',
+				'luces-sabi': 'url("/img/luces-sabi-HD.png")',
+				'control-sabi': 'url("/img/control-sabi-HD.png")'
 			},
 			dropShadow: {
 				normal: '0px 2px 4px #00000025'
@@ -31,11 +35,17 @@ module.exports = {
 			screens: {
 				mini: '360px'
 			},
-			fontSize: {
-				'6xl': '[3.75rem, { lineHeight: 1.1 }]'
-			},
 			boxShadow: {
 				rounded: '0px 0px 4px #00000025'
+			},
+			keyframes: {
+				click: {
+					'0%, 100%': { transform: 'scale(1)' },
+					'80%': { transform: 'scale(0.9)' }
+				}
+			},
+			animation: {
+				'click-button': 'click 0.1s ease-in-out 1'
 			}
 		}
 	},
