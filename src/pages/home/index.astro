@@ -1,0 +1,42 @@
+---
+import Button from '../../components/Button'
+import ButtonAlternative from '../../components/ButtonAlternative'
+import { ArrowDown } from '../../components/icons'
+
+import Navbar from '../../components/Navbar.astro'
+import Layout from '../../layouts/Layout.astro'
+import Carousel from './components/Carousel.jsx'
+import ModelViewer from './components/ModelViewer.astro'
+---
+
+<Layout title='SABI | Inicio'>
+	<Navbar />
+	<main class='w-full h-screen bg-color lg:grid grid-cols-2 relative'>
+		<section class='hidden lg:flex flex-col items-start justify-center m-auto gap-8'>
+			<div class='flex flex-col gap-3'>
+				<h1 class='text-6xl font-blinker font-bold text-sabi'>
+					Sistema<br />Automatico de<br />Bicicleta<br />Inteligente
+				</h1>
+				<h3 class='text-xl font-nunito text-color'>
+					Producto diseñado para brindar<br />
+					<b class='text-sabi'>seguridad</b> a los ciclistas
+				</h3>
+			</div>
+			<div class='flex gap-6'>
+				<ButtonAlternative text='Iniciar Sesión' client:only />
+				<Button text='Ver productos' client:only />
+			</div>
+		</section>
+		<section class='h-full w-full'>
+			<Carousel client:visible />
+		</section>
+		<div
+			class='bg-color h-10 w-20 flex items-end justify-center rounded-t-full absolute bottom-0 right-[calc(50%-2.5rem)]'
+		>
+			<ArrowDown />
+		</div>
+	</main>
+	<main class='w-full h-screen flex justify-center items-center'>
+		<ModelViewer />
+	</main>
+</Layout>
