@@ -1,57 +1,78 @@
 ---
-import DropDown from '../components/Drop_down.astro';
-import FloatingMenu from './Floating_menu.astro';
-import Button from './Button.astro';
+import DropDown from '../components/Dropdown.astro'
+import FloatingMenu from './FloatingMenu.astro'
+import Button from './Button.jsx'
 ---
-    <DropDown/>
-    <nav class="fixed bg-white z-[90] gap-5 top-0 left-0 w-full flex justify-between items-center h-16 px-5 border-b-[1px] border-light-gray dark:bg-dark dark:border-dark-gray md:justify-start">
-        
-        <img src="/img/logo-sabi.svg" alt="logo_sabi" class="hidden h-8 lg:block">
-        <img id="hamburger-button" src="/img/Hamburger_3.svg" alt="hamburguer_icon" class="h-8 dark:invert hover:cursor-pointer lg:hidden">
-        <h4 class="text-xl font-blinker bg-sabi bg-clip-text text-transparent font-bold text-shadow">SABI</h4>
-        <ul class="hidden lg:flex h-full">
-            <li class="flex justify-center items-center h-full px-10 hover:bg-light-gray hover:cursor-pointer"><a href="#" class="text-base font-nunito">Productos</a></li>
-            <li class="flex justify-center items-center h-full px-10 hover:bg-light-gray hover:cursor-pointer"><a href="#" class="text-base font-nunito">Contacto</a></li>
-            <li class="flex justify-center items-center h-full px-10 hover:bg-light-gray hover:cursor-pointer"><a href="#" class="text-base font-nunito">Acerca de</a></li>
-        </ul>
 
-        <div class="hidden md:block ml-auto">
-            <Button text="Mi SABI"/>
-        </div>
+<DropDown />
+<nav
+	class='fixed bg-white z-[90] gap-5 top-0 left-0 w-full flex justify-between items-center h-16 px-5 border-b-[1px] border-light-gray dark:bg-dark dark:border-dark-gray md:justify-start'
+>
+	<img src='/img/sabi-icon.svg' alt='logo_sabi' class='hidden h-8 lg:block' />
+	<img
+		id='hamburger-button'
+		src='/img/hamburger-icon.svg'
+		alt='hamburguer-icon'
+		class='h-8 dark:invert hover:cursor-pointer lg:hidden'
+	/>
+	<h4 class='text-xl font-blinker bg-sabi bg-clip-text text-transparent font-bold text-shadow'>
+		SABI
+	</h4>
+	<ul class='hidden lg:flex h-full'>
+		<li
+			class='flex justify-center items-center h-full px-10 hover:bg-gray-100 dark:hover:bg-dark-gray hover:cursor-pointer'
+		>
+			<a href='#' class='text-base text-color font-nunito'>Productos</a>
+		</li>
+		<li
+			class='flex justify-center items-center h-full px-10 hover:bg-gray-100 dark:hover:bg-dark-gray hover:cursor-pointer'
+		>
+			<a href='#' class='text-base text-color font-nunito'>Contacto</a>
+		</li>
+		<li
+			class='flex justify-center text-color items-center h-full px-10 hover:bg-gray-100 dark:hover:bg-dark-gray hover:cursor-pointer'
+		>
+			<a href='#' class='text-base text-color font-nunito'>Acerca de</a>
+		</li>
+	</ul>
 
-        <div id="user-button" class="flex items-center justify-end gap-2 relative hover:cursor-pointer hover:bg-gray-100 p-1 rounded-full">
-            <div class="hidden absolute h-full z-10 top-16 ">
-                <FloatingMenu/>
-            </div>
-            <h4 class="hidden ml-2 text-base font-nunito font-bold  z-20 md:block">Usuario</h4>
-            <img src="/img/user_icon.svg" alt="user_icon" class=" z-20 h-8">
-        </div>
-    </nav>
+	<div class='hidden md:block ml-auto'>
+		<Button text='Mi SABI' client:only />
+	</div>
+
+	<div
+		id='user-button'
+		class='flex items-center justify-end gap-2 relative hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-dark-gray p-1 rounded-full'
+	>
+		<div class='hidden absolute h-full z-10 top-16'>
+			<FloatingMenu />
+		</div>
+		<h4 class='hidden ml-2 text-base text-color font-nunito font-bold z-20 md:block'>Usuario</h4>
+		<img src='/img/user-icon.svg' alt='user_icon' class='z-20 h-8' />
+	</div>
+</nav>
 
 <script>
-    const userButton = document.getElementById('user-button')
-    const dropDown = document.getElementById('drop-down')
-    const hamburgerButton = document.getElementById('hamburger-button')
-    const arrowBackDropDown = document.getElementById('arrow-back-drop-down')
-    const opacity = document.getElementById('opacity')
+	const userButton = document.getElementById('user-button')
+	const dropDown = document.getElementById('drop-down')
+	const hamburgerButton = document.getElementById('hamburger-button')
+	const arrowBackDropDown = document.getElementById('arrow-back-drop-down')
+	const opacity = document.getElementById('opacity')
 
-    userButton.addEventListener('click', () => {
-        const firstChild = userButton.children[0]
-        firstChild.classList.toggle('hidden')
-    })
+	userButton.addEventListener('click', () => {
+		const firstChild = userButton.children[0]
+		firstChild.classList.toggle('hidden')
+	})
 
-    hamburgerButton.addEventListener('click', () => {
-        dropDown.classList.add('left-0')
-        dropDown.classList.remove('-left-full')
-        opacity.classList.toggle('hidden')
-    })
+	hamburgerButton.addEventListener('click', () => {
+		dropDown.classList.add('left-0')
+		dropDown.classList.remove('-left-full')
+		opacity.classList.toggle('hidden')
+	})
 
-    
-    arrowBackDropDown.addEventListener('click', () =>{
-        dropDown.classList.add('-left-full')
-        dropDown.classList.remove('left-0')
-        opacity.classList.toggle('hidden')
-    })
-
+	arrowBackDropDown.addEventListener('click', () => {
+		dropDown.classList.add('-left-full')
+		dropDown.classList.remove('left-0')
+		opacity.classList.toggle('hidden')
+	})
 </script>
-
