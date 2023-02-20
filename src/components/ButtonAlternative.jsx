@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks'
 
-export default function ButtonAlternative({ text }) {
+export default function ButtonAlternative({ text, href = '#' }) {
 	const [isClick, setIsClick] = useState(false)
 
 	const handleClick = () => {
@@ -11,7 +11,8 @@ export default function ButtonAlternative({ text }) {
 	}
 
 	return (
-		<button
+		<a
+			href={href}
 			onClick={handleClick}
 			class={
 				(isClick ? 'animate-click-button' : '') +
@@ -23,17 +24,6 @@ export default function ButtonAlternative({ text }) {
 					{text}
 				</span>
 			</div>
-		</button>
+		</a>
 	)
 }
-
-/*
-<button
-			onClick={handleClick}
-			class={`${
-				isClick ? 'animate-click-button' : ''
-			} bg-sabi rounded px-4 py-1 hover:scale-105 drop-shadow-normal`}
-		>
-			<span class='text-white font-blinker font-bold text-base text-center'>{text}</span>
-		</button>
-*/

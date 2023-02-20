@@ -12,13 +12,12 @@ export default function Button({ text, href = '#' }) {
 
 	return (
 		<a
-		href={href}
+			href={href}
 			onClick={handleClick}
-			class={`${
-				isClick ? 'animate-click-button' : ''
-			} bg-sabi rounded px-4 py-1 hover:scale-105 drop-shadow-normal`}
+			className={
+				(isClick ? 'animate-click-button' : '') + ' bg-sabi rounded-md flex justify-center items-center px-4 py-1 hover:scale-105 drop-shadow-normal'}
 		>
-			<span class='text-white font-blinker font-bold text-base text-center'>{text}</span>
+			<span className='text-white font-blinker font-bold text-base text-center'>{text}</span>
 		</a>
 	)
 }
