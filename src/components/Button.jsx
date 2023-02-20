@@ -1,6 +1,6 @@
 import { useState } from 'preact/hooks'
 
-export default function Button({ text, href = '#'}) {
+export default function Button({ text, href = '#' }) {
 	const [isClick, setIsClick] = useState(false)
 
 	const handleClick = () => {
