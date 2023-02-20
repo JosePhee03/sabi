@@ -24,11 +24,11 @@
 	@apply w-full bg-transparent text-lg font-nunito p-2 border-2 rounded outline-none;
 }
 
-.fill-color {
+.fill-gray-color {
 	@apply fill-light-gray dark:fill-dark-gray;
 }
 
-.fill-text-color {
+.fill-color {
 	@apply fill-black dark:fill-white;
 }
 
@@ -70,4 +70,8 @@
 
 .gray-color-100 {
 	@apply bg-white-100 dark:bg-dark-100;
+}
+
+.stroke-color {
+	@apply stroke-black dark:stroke-white;
 }

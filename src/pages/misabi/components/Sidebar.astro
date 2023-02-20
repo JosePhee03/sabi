@@ -1,0 +1,81 @@
+---
+import {
+	BatteryIcon,
+	ChartIcon,
+	HamburgerIcon,
+	MapIcon,
+	SettingsIcon
+} from '../../../components/icons'
+---
+
+<div class='sticky top-0 z-50 h-screen hidden sm:block'>
+	<section
+		class='group w-16 hover:w-80 absolute bg-color h-full flex flex-col border-r border-color'
+	>
+		<div class='h-full'>
+			<span class='flex pl-2.5 h-16 gap-3 items-center'><HamburgerIcon /></span>
+			<a
+				href='#functions'
+				class='flex pl-4 gap-4 h-16 items-center hover:cursor-pointer dark:hover:bg-dark-gray hover:bg-light-gray'
+				><BatteryIcon /><h2 class='text-color text-2xl font-nunito hidden group-hover:block'>
+					Funciones
+				</h2></a
+			>
+			<a
+				href='#grafics'
+				class='flex pl-4 gap-4 h-16 items-center hover:cursor-pointer dark:hover:bg-dark-gray hover:bg-light-gray'
+				><ChartIcon /><h2 class='text-color text-2xl font-nunito hidden group-hover:block'>
+					Estadísticas
+				</h2></a
+			>
+			<a
+				href='#maps'
+				class='flex pl-4 gap-4 h-16 items-center hover:cursor-pointer dark:hover:bg-dark-gray hover:bg-light-gray'
+				><MapIcon /><h2 class='text-color text-2xl font-nunito hidden group-hover:block'>
+					Mapas
+				</h2></a
+			>
+		</div>
+		<div class='h-full flex flex-col justify-end'>
+			<a
+				href=''
+				class='flex pl-5 gap-5 h-16 items-center hover:cursor-pointer dark:hover:bg-dark-gray hover:bg-light-gray'
+				><SettingsIcon /><h2 class='text-color text-2xl font-nunito hidden group-hover:block'>
+					Configuraciones
+				</h2></a
+			>
+		</div>
+	</section>
+</div>
+
+<!--
+
+	<div class='div1s flex justify-start items-center pl-3 gap-6'>
+			<HamburgerIcon />
+		</div>
+		<div
+			class='div2s hover:bg-light-gray hover:cursor-pointer dark:hover:bg-dark-gray flex justify-start items-center pl-4 gap-6'
+		>
+			<BatteryIcon />
+			<h2 class='text-color text-2xl font-nunito'>Funciones</h2>
+		</div>
+		<div
+			class='div3s hover:bg-light-gray hover:cursor-pointer dark:hover:bg-dark-gray flex justify-start items-center pl-4 gap-6'
+		>
+			<ChartIcon />
+			<h2 class='text-color text-2xl font-nunito'>Estadísticas</h2>
+		</div>
+		<div
+			class='div4s hover:bg-light-gray hover:cursor-pointer dark:hover:bg-dark-gray flex justify-start items-center pl-4 gap-6'
+		>
+			<MapIcon />
+			<h2 class='text-color text-2xl font-nunito'>Mapas</h2>
+		</div>
+
+		<div
+			class='div5s hover:bg-light-gray hover:cursor-pointer dark:hover:bg-dark-gray flex justify-start items-center pl-5 gap-6'
+		>
+			<SettingsIcon />
+			<h2 class='text-color text-2xl font-nunito'>Configuraciones</h2>
+		</div>
+ -->

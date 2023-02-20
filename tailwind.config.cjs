@@ -8,11 +8,11 @@ module.exports = {
 				primary: '#574EB1',
 				secondary: '#0656D0',
 				'light-gray': '#eeeeee',
-				'dark-gray': '#424864',
+				'dark-gray': '#292D3E', // '#424864',
 				dark: '#16171b', // '#292D3E'
-				'dark-100': '#272B3B',
+				'dark-100': '#17181d', // '#272B3B'
 				'white-100': '#F9F9F9',
-				'semi-transparent': '#00000020',
+				'semi-transparent': '#00000015',
 				github: '#2B3137'
 			},
 			fontFamily: {

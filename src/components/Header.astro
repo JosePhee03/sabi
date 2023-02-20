@@ -1,15 +1,21 @@
 ---
+import { BackArrowIcon } from './icons'
 import UserMenu from './UserMenu.astro'
 ---
 
 <header class='grid grid-cols-3 h-16 bg-color border-b border-color w-full px-5'>
 	<div class='flex justify-start items-center'>
-		<a href='#'
-			><img src='/img/arrow-icon.svg' alt='Icono de flecha' class='img-size dark:invert w-8' /></a
-		>
+		<a
+			href='#'
+			class='flex items-center gap-2 px-2 py-1 hover:bg-light-gray dark:hover:bg-dark-gray rounded-md'
+			><BackArrowIcon />
+			<span class='hidden md:block text-color text-lg font-nunito'>Atrás</span>
+		</a>
 	</div>
 	<div class='flex justify-center items-center'>
 		<h2 class='text-2xl font-blinker font-bold text-sabi'>Mi SABI</h2>
 	</div>
-	<div class='flex justify-end items-center'><UserMenu /></div>
+	<div class='flex justify-end items-center'>
+		<UserMenu />
+	</div>
 </header>

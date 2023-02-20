@@ -1,10 +1,11 @@
 ---
 import Button from '../../../components/Button.jsx'
-import { Toggle } from '../../../components/utilities/Toggle'
+import { BatteryChargedIcon, Toggle } from '../../../components/icons.jsx'
 ---
 
 <section
-	class='flex flex-col items-center px-8 py-4 gap-3 w-full lg:w-96 bg-white sm:rounded-md sm:border border-light-gray dark:bg-dark dark:border-dark-gray'
+	id='functions'
+	class='flex flex-col items-center px-8 py-4 gap-3 w-full lg:w-96 bg-color rounded-none sm:rounded-md border border-color'
 >
 	<h2 class='text-sabi font-blinker text-2xl font-semibold'>Funciones</h2>
 	<article class='divide-y divide-color'>
@@ -12,7 +13,7 @@ import { Toggle } from '../../../components/utilities/Toggle'
 			<h4 class='text-color font-blinker text-lg'>Nivel de bateria</h4>
 			<span class='flex items-center gap-2'>
 				<h4 class='text-color font-blinker text-lg'>60%</h4>
-				<img src='/img/battery-2-icon.svg' alt='' />
+				<BatteryChargedIcon />
 			</span>
 		</div>
 		<div class='flex items-center justify-between h-14'>

@@ -25,50 +25,52 @@ export default function Slider() {
 		<>
 			<section
 				ref={sectionRef}
-				className={'flex flex-col h-80 relative snap-x overflow-x-scroll bg-sabi justify-center'}
+				className={
+					'flex flex-col h-80 relative snap-x overflow-x-scroll bg-sabi justify-center xl:items-center'
+				}
 			>
-				<div className='flex w-[69rem] gap-12 mx-5 items-center h-full '>
+				<div className='flex w-[69rem] gap-12 mx-5 items-center h-full'>
 					<div
 						className={
-							'card-stats opacity-80  snap-center w-60 h-28 bg-white rounded-md flex flex-col items-center justify-center gap-4 transition-all duration-300 ease-in-out'
+							'card-stats opacity-80 drop-shadow-normal snap-center w-60 h-28 bg-color rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
 						}
 					>
-						<h3 className='font-nunito text-xl font-bold text-orange-400'>Mejor Recorrido</h3>
-						<h3 className='font-nunito text-xl '>
-							8 <b className='text-orange-400'>km</b>
+						<h3 className='font-nunito text-xl font-bold text-gradient-red'>Mejor Recorrido</h3>
+						<h3 className='font-nunito text-xl text-color'>
+							8 <b className='text-gradient-red'>km</b>
 						</h3>
 					</div>
 
 					<div
 						className={
-							'card-stats opacity-80 snap-center w-60 h-28 bg-white rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
+							'card-stats opacity-80 drop-shadow-normal snap-center w-60 h-28 bg-color rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
 						}
 					>
-						<h3 className='font-nunito text-xl font-bold text-red-400'>Mejor Recorrido</h3>
-						<h3 className='font-nunito text-xl'>
-							8 <b className='text-red-400'>km</b>
+						<h3 className='font-nunito text-xl font-bold text-gradient-orange'>Mejor Recorrido</h3>
+						<h3 className='font-nunito text-xl text-color'>
+							8 <b className='text-gradient-orange'>km</b>
 						</h3>
 					</div>
 
 					<div
 						className={
-							'card-stats opacity-80 snap-center w-60 h-28 bg-white rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
+							'card-stats opacity-80 drop-shadow-normal snap-center w-60 h-28 bg-color rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
 						}
 					>
-						<h3 className='font-nunito text-xl font-bold text-violet-400'>Mejor Recorrido</h3>
-						<h3 className='font-nunito text-xl'>
-							8 <b className='text-violet-400'>km</b>
+						<h3 className='font-nunito text-xl font-bold text-gradient-purple'>Mejor Recorrido</h3>
+						<h3 className='font-nunito text-xl text-color'>
+							8 <b className='text-gradient-purple'>km</b>
 						</h3>
 					</div>
 
 					<div
 						className={
-							'card-stats opacity-80 snap-center w-60 h-28 bg-white rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
+							'card-stats opacity-80 drop-shadow-normal snap-center w-60 h-28 bg-color rounded-md flex flex-col items-center justify-center gap-4 transition-opacity duration-300 ease-in-out'
 						}
 					>
-						<h3 className='font-nunito text-xl font-bold text-violet-400'>Mejor Recorrido</h3>
-						<h3 className='font-nunito text-xl'>
-							8 <b className='text-violet-400'>km</b>
+						<h3 className='font-nunito text-xl font-bold text-gradient-green'>Mejor Recorrido</h3>
+						<h3 className='font-nunito text-xl text-color'>
+							8 <b className='text-gradient-green'>km</b>
 						</h3>
 					</div>
 				</div>

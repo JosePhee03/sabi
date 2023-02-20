@@ -1,20 +1,19 @@
 ---
 import DropDown from '../components/Dropdown.astro'
-import FloatingMenu from './FloatingMenu.astro'
+import UserMenu from './UserMenu.astro'
 import Button from './Button.jsx'
+import { HamburgerIcon } from './icons'
 ---
 
 <DropDown />
 <nav
-	class='fixed bg-white z-[90] gap-5 top-0 left-0 w-full flex justify-between items-center h-16 px-5 border-b-[1px] border-light-gray dark:bg-dark dark:border-dark-gray md:justify-start'
+	class='fixed bg-color z-[90] gap-5 top-0 left-0 w-full flex justify-between items-center h-16 px-5 border-b border-color md:justify-start'
 >
 	<img src='/img/sabi-icon.svg' alt='logo_sabi' class='hidden h-8 lg:block' />
-	<img
-		id='hamburger-button'
-		src='/img/hamburger-icon.svg'
-		alt='hamburguer-icon'
-		class='h-8 dark:invert hover:cursor-pointer lg:hidden'
-	/>
+	<div class='h-8 dark:invert hover:cursor-pointer lg:hidden'>
+		<HamburgerIcon />
+	</div>
+
 	<h4 class='text-xl font-blinker bg-sabi bg-clip-text text-transparent font-bold text-shadow'>
 		SABI
 	</h4>
@@ -39,30 +38,14 @@ import Button from './Button.jsx'
 	<div class='hidden md:block ml-auto'>
 		<Button text='Mi SABI' client:only />
 	</div>
-
-	<div
-		id='user-button'
-		class='flex items-center justify-end gap-2 relative hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-dark-gray p-1 rounded-full'
-	>
-		<div class='hidden absolute h-full z-10 top-16'>
-			<FloatingMenu />
-		</div>
-		<h4 class='hidden ml-2 text-base text-color font-nunito font-bold z-20 md:block'>Usuario</h4>
-		<img src='/img/user-icon.svg' alt='user_icon' class='z-20 h-8' />
-	</div>
+	<UserMenu />
 </nav>
 
 <script>
-	const userButton = document.getElementById('user-button')
 	const dropDown = document.getElementById('drop-down')
 	const hamburgerButton = document.getElementById('hamburger-button')
 	const arrowBackDropDown = document.getElementById('arrow-back-drop-down')
 	const opacity = document.getElementById('opacity')
-
-	userButton.addEventListener('click', () => {
-		const firstChild = userButton.children[0]
-		firstChild.classList.toggle('hidden')
-	})
 
 	hamburgerButton.addEventListener('click', () => {
 		dropDown.classList.add('left-0')

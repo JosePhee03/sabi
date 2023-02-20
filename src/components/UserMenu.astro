@@ -1,0 +1,23 @@
+---
+import FloatingMenu from './FloatingMenu.astro'
+---
+
+<div
+	id='user-button'
+	class='flex items-center justify-end gap-2 relative hover:cursor-pointer hover:bg-light-gray dark:hover:bg-dark-gray p-1 rounded-md'
+>
+	<div class='hidden absolute h-full z-10 top-16'>
+		<FloatingMenu />
+	</div>
+	<h4 class='hidden ml-2 text-base text-color font-nunito font-bold z-20 md:block'>Usuario</h4>
+	<img src='/img/user-icon.svg' alt='user_icon' class='z-20 h-8' />
+</div>
+
+<script>
+	const userButton = document.getElementById('user-button')
+
+	userButton.addEventListener('click', () => {
+		const firstChild = userButton.children[0]
+		firstChild.classList.toggle('hidden')
+	})
+</script>

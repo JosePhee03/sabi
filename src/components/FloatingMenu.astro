@@ -1,29 +1,31 @@
 ---
-import { Toggle } from './utilities/Toggle'
+import { SettingsIcon } from './icons'
 ---
 
 <!-- Floating menu  -->
 <div
-	class='flex justify-center items-center flex-col gap-2 w-52 bg-gray-100 floating-element rounded-b rounded-tl drop-shadow'
+	class='flex justify-center items-center flex-col gap-2 w-52 gray-color-100 floating-element rounded-b rounded-tl drop-shadow dark:after:border-b-[#16171b]'
 >
 	<div
-		class='relative flex justify-center items-center flex-col gap-1 pt-2 w-full hover:bg-light-gray hover:cursor-pointer'
+		class='relative flex justify-center items-center flex-col gap-1 pt-2 w-full hover:bg-light-gray dark:hover:bg-dark-gray hover:cursor-pointer'
 	>
 		<img src='/img/user-icon.svg' alt='icon user sabi' class='w-24' />
-		<h3 class='button-config font-nunito font-bold text-2xl'>Usuario</h3>
-		<img src='/img/settings-icon.svg' alt='icon settings' class='absolute top-2 left-2' />
+		<h2 class='button-config font-nunito font-bold text-2xl text-color'>Usuario</h2>
+		<div class='absolute top-2 left-2'>
+			<SettingsIcon />
+		</div>
 	</div>
 	<button
 		class='px-4 py-1 rounded-full hover:bg-red-400 border-[1px] border-red-400 hover:cursor-pointer'
 	>
-		<h5 class='font-nunito text-xs text-center'>Cerrar Sesión</h5>
+		<h5 class='font-nunito text-xs text-center text-color'>Cerrar Sesión</h5>
 	</button>
 
 	<button
 		id='button-theme'
-		class='cursor-ponter hover:bg-light-gray w-full py-2 border-light-gray border-t'
+		class='cursor-ponter hover:bg-light-gray dark:hover:bg-dark-gray w-full py-2 border-color border-t'
 	>
-		<h4 class='font-nunito text-sm text-center'>Tema: claro</h4>
+		<h4 class='font-nunito text-sm text-center text-color'>Tema: claro</h4>
 	</button>
 </div>
 <!-- Floating menu/ -->
