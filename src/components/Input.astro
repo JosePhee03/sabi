@@ -7,11 +7,13 @@ export interface Props {
 const { type, text } = Astro.props
 ---
 
-<div class='w-full'>
-	<h4 class='text-lg text-color font-nunito'>{text}</h4>
+<div class='w-full relative'>
+	<h6 class='text-sm text-color font-nunito'>{text}</h6>
 	<input
+		required
 		type={type}
 		placeholder={`Escriba su ${text.toLowerCase()}...`}
-		class='w-full bg-transparent shadow-sm font-nunito p-2 text-sm border-2 border-color text-color rounded-md outline-none focus:border-secondary dark:focus:border-secondary'
+		class='w-full bg-transparent shadow-sm font-nunito p-2 text-sm border border-color valid:border-green-400 text-color rounded-md outline-none focus:border-secondary dark:focus:border-secondary'
 	/>
+
 </div>
